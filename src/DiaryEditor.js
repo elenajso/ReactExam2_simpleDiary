@@ -43,24 +43,24 @@ const contentInput = useRef();
 
     <div>
       <input 
-      ref={authorInput}
-      name="author" value={state.author}
-        onChange={handleChangeState
-      } />
+        ref={authorInput}
+        name="author"
+        value={state.author}
+        onChange={handleChangeState}
+      />
     </div>
     <div>
       <textarea
-      ref={contentInput}
-
-      name="content"  value={state.content}
-        onChange={
-          handleChangeState
-        }/>
+        ref={contentInput}
+        name="content"
+        value={state.content}
+        onChange={handleChangeState}
+      />
     </div>
     <div>
       <select name="emotion"
         value={state.emotion}
-      onChange={handleChangeState}>
+        onChange={handleChangeState}>
         <option value={1}>1</option>
         <option value={2}>2</option>
         <option value={3}>3</option>
