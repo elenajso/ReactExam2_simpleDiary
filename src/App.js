@@ -2,6 +2,7 @@ import { useMemo, useRef, useState} from 'react';
 import './App.css';
 import DiaryEditor from './DiaryEditor';
 import DiaryList from './DiaryList';
+
 import OptimizeTest from './OptimizeTest';
 
 // const dummyList=[
@@ -64,6 +65,7 @@ function App() {
               it.id === targetId ? { ...it, content: newContent } : it)
         );
     };
+
     const getDiaryAnalysis = useMemo(() => {
       if (data.length === 0) {
         return { goodcount: 0, badCount: 0, goodRatio: 0 };
@@ -79,6 +81,7 @@ function App() {
   
   return (
     <div className="App">
+      <h2>일기장
       <OptimizeTest/>
      
         <DiaryEditor onCreate={onCreate} />
@@ -87,6 +90,7 @@ function App() {
         <div>기분 나쁜 일기 개수 : {badCount}</div>
         <div>기분 좋은 일기 비율 : {goodRatio}</div>
         <DiaryList onEdit={onEdit} onRemove={onRemove} diaryList={data} />
+      </h2>
       
     </div>
   );
