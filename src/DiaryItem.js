@@ -32,7 +32,8 @@ const DiaryItem = ({ onEdit, onRemove, author, content, created_date, emotion, i
     }
     
 
-    return (<div className="DiaryItem">
+    return (
+        <div className="DiaryItem">
         <div className="info">
             <span>
                 작성자 : {author} | 감정점수 : {emotion}
